@@ -3,12 +3,13 @@
     <input
       class="search-query"
       v-model="search"
-      placeholder="Search Vue.js"
+      placeholder="Vue.js بحث"
     >
     <div class="search-footer">
       <p>
         <template v-if="totalResults">
           <strong>{{ totalResults }} results</strong> found in {{ queryTime }}ms
+          <strong>{{ totalResults }} نتيجة</strong>تم إيجادها في {{ queryTime }} ميلي-ثانية
         </template>
       </p>
       <a target="_blank" href="https://www.algolia.com/">
@@ -25,7 +26,7 @@
     ></search-result>
   </template>
 
-  <p v-else>No results were found.</p>
+  <p v-else>لا يوجد نتائج.</p>
 
   <div ref="infiniteScrollAnchor"></div>
 

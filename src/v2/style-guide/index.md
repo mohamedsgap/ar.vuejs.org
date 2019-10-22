@@ -1,5 +1,5 @@
 ---
-title: Style Guide
+title: دليل الانماط
 type: style-guide
 ---
 
@@ -48,7 +48,7 @@ Some features of Vue exist to accommodate rare edge cases or smoother migrations
 This [prevents conflicts](http://w3c.github.io/webcomponents/spec/custom/#valid-custom-element-name) with existing and future HTML elements, since all HTML elements are a single word.
 
 {% raw %}<div class="style-example example-bad">{% endraw %}
-#### Bad
+#### سيء
 
 ``` js
 Vue.component('todo', {
@@ -65,7 +65,7 @@ export default {
 {% raw %}</div>{% endraw %}
 
 {% raw %}<div class="style-example example-good">{% endraw %}
-#### Good
+#### جيد
 
 ``` js
 Vue.component('todo-item', {
@@ -83,16 +83,16 @@ export default {
 
 
 
-### Component data <sup data-p="a">essential</sup>
+### بيانات المكونات <sup data-p="a">اساسي</sup>
 
-**Component `data` must be a function.**
+**عنصر بيانات المكونات `data` يجب ان يكون دالة.**
 
-When using the `data` property on a component (i.e. anywhere except on `new Vue`), the value must be a function that returns an object.
+عند استخدام خاصية `data` في المكون (في اي مكان باستثناء `new Vue`) يجب ان تكون قيمتها تساوي دالة وتقوم بارجاع عنصر.
 
 {% raw %}
 <details>
 <summary>
-  <h4>Detailed Explanation</h4>
+  <h4>شرح مفصل</h4>
 </summary>
 {% endraw %}
 
@@ -1454,7 +1454,7 @@ While attribute values without any spaces are not required to have quotes in HTM
 
 ``` html
 <template v-slot:header>
-  <h1>Here might be a page title</h1> 
+  <h1>Here might be a page title</h1>
 </template>
 
 <template #footer>
@@ -1496,7 +1496,7 @@ While attribute values without any spaces are not required to have quotes in HTM
 
 ``` html
 <template v-slot:header>
-  <h1>Here might be a page title</h1> 
+  <h1>Here might be a page title</h1>
 </template>
 
 <template v-slot:footer>
@@ -1506,7 +1506,7 @@ While attribute values without any spaces are not required to have quotes in HTM
 
 ``` html
 <template #header>
-  <h1>Here might be a page title</h1> 
+  <h1>Here might be a page title</h1>
 </template>
 
 <template #footer>

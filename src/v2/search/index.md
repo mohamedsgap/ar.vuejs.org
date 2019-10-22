@@ -1,5 +1,5 @@
 ---
-title: البحث في ڤيو
+title: البحث في Vue.js
 type: search
 search: true
 ---

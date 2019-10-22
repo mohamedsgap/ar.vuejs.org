@@ -124,7 +124,6 @@ order: 803
 
     <h2 id="active-core-team-members">
       اعضاء فريق العمل الاساسيين الفعالين
-      <br>
       <button
         v-if="geolocationSupported && !userPosition"
         @click="getUserPosition"

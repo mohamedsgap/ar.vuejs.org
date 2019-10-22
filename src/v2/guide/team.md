@@ -54,7 +54,7 @@ order: 803
         <span v-if="profile.distanceInKm" class="distance">
           <dt>
             <i class="fa fa-map-marker"></i>
-            <span class="sr-only">المسافة</span>
+            <span class="sr-only">البعد</span>
           </dt>
           <dd>
             على بعد

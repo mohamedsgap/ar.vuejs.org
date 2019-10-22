@@ -1,5 +1,5 @@
 ---
-title: دليل الانماط
+title: دليل التنسيق
 type: style-guide
 ---
 

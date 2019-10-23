@@ -1,13 +1,9 @@
-﻿# vuejs.org
+<h1 dir="rtl">ar.vuejs.org</h1>
 
-This site is built with [hexo](http://hexo.io/). Site content is written in Markdown format located in `src`. Pull requests welcome!
+<p dir="rtl">تم بناء هذا الموقع بواسطة <a href="http://hexo.io/">hexo</a>. تم كتابة محتوى الموقع بواسطة صياغة Markdown الموجود في ملف <code>src</code>. طلبات السحب مرحب بها!</p>
 
-## Developing
-
-``` bash
-$ npm install
-$ npm start # dev server at http://localhost:4000
-```
+<h2 dir="rtl">التطوير</h2>
+<pre>$ npm install<br>$ npm start # dev server at http://localhost:4000</pre>
 
 ## Deploying
 

@@ -1,5 +1,5 @@
 ---
-title: انضم الى مجتمع Vue.js الان!
+title: انضم الى مجتمع Vue.js الآن!
 type: guide
 order: 802
 ---

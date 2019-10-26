@@ -1,5 +1,5 @@
 ---
-title: Meet the Team
+title: فريق العمل
 type: guide
 order: 803
 ---
@@ -25,7 +25,7 @@ order: 803
       </h3>
       <dl>
         <template v-if="profile.reposOfficial">
-          <dt>Core focus</dt>
+          <dt>التركيز الاساسي</dt>
           <dd>
             <ul>
               <li v-for="repo in profile.reposOfficial">
@@ -35,7 +35,7 @@ order: 803
           </dd>
         </template>
         <template v-if="profile.github && profile.reposPersonal">
-          <dt>Ecosystem</dt>
+          <dt>النظام البيئي</dt>
           <dd>
             <ul>
               <li v-for="repo in profile.reposPersonal">
@@ -47,30 +47,30 @@ order: 803
         <template v-if="profile.work">
           <dt>
             <i class="fa fa-briefcase"></i>
-            <span class="sr-only">Work</span>
+            <span class="sr-only">الوظيفة</span>
           </dt>
           <dd v-html="workHtml"></dd>
         </template>
         <span v-if="profile.distanceInKm" class="distance">
           <dt>
             <i class="fa fa-map-marker"></i>
-            <span class="sr-only">Distance</span>
+            <span class="sr-only">البعد</span>
           </dt>
           <dd>
-            About
+            على بعد
             <span
               v-if="profile.distanceInKm <= 150"
-              :title="profile.name + ' is close enough to commute to your location.'"
+              :title="profile.name + ' قريب بما فيه الكفاية لتتقابلوا سوياً.'"
               class="user-match"
-            >{{ textDistance }} away</span>
-            <template v-else>{{ textDistance }} away</template>
-            in {{ profile.city }}
+            >{{ textDistance }}</span>
+            <template v-else>{{ textDistance }}</template>
+            في مدينة {{ profile.city }}
           </dd>
         </span>
         <template v-else-if="profile.city">
           <dt>
             <i class="fa fa-map-marker"></i>
-            <span class="sr-only">City</span>
+            <span class="sr-only">المدينة</span>
           </dt>
           <dd>
             {{ profile.city }}
@@ -79,14 +79,14 @@ order: 803
         <template v-if="profile.languages">
           <dt>
             <i class="fa fa-globe"></i>
-            <span class="sr-only">Languages</span>
+            <span class="sr-only">اللغات</span>
           </dt>
           <dd v-html="languageListHtml" class="language-list"></dd>
         </template>
         <template v-if="profile.links">
           <dt>
             <i class="fa fa-link"></i>
-            <span class="sr-only">Links</span>
+            <span class="sr-only">الروابط</span>
           </dt>
           <dd>
             <ul>
@@ -123,7 +123,7 @@ order: 803
   <div class="team">
 
     <h2 id="active-core-team-members">
-      Active Core Team Members
+      أعضاء فريق العمل الأساسيين الفاعلين
       <button
         v-if="geolocationSupported && !userPosition"
         @click="getUserPosition"
@@ -136,21 +136,21 @@ order: 803
         ></i>
         <template v-else>
           <i class="fa fa-map-marker"></i>
-          <span>find near me</span>
+          <span>البحث عن الموجودين بالقرب مني</span>
         </template>
       </button>
     </h2>
-
+    <br>
     <p v-if="errorGettingLocation" class="tip">
-      Failed to get your location.
+      فشل معرفة موقعك الحالي.
     </p>
 
     <p>
-      The development of Vue and its ecosystem is guided by an international team, some of whom have chosen to be featured below.
+    تطوير Vue ونظامها البيئي يتم من خلال إشراف فريق عمل عالمي، والقائمة بالاسفل تضم مجموعه منهم ممن قرروا ضمهم ضمن القائمة المعروضه.
     </p>
 
     <p v-if="userPosition" class="success">
-      The core team has been sorted by their distance from you.
+      أعضاء الفريق الأساسي تم ترتيبهم بالأقرب اليك.
     </p>
 
     <vuer-profile
@@ -163,11 +163,11 @@ order: 803
 
   <div class="team">
     <h2 id="core-team-emeriti">
-      Core Team Emeriti
+      أعضاء فريق العمل الأساسيين المتقاعدين/الشرفيين
     </h2>
 
     <p>
-      Here we honor some no-longer-active core team members who have made valuable contributions in the past.
+    هنا نقوم بعرض قائمة بالأعضاء الشرفيين الذين ساهموا في Vue بشكل اساسي وقاموا بعمل مساهمات كبيرة في المشروع.
     </p>
 
     <vuer-profile
@@ -180,7 +180,8 @@ order: 803
 
   <div class="team">
     <h2 id="community-partners">
-      Community Partners
+      شركاء المجتمع
+      <br>
       <button
         v-if="geolocationSupported && !userPosition"
         @click="getUserPosition"
@@ -193,21 +194,21 @@ order: 803
         ></i>
         <template v-else>
           <i class="fa fa-map-marker"></i>
-          <span>find near me</span>
+          <span>البحث بالقرب من موقعي</span>
         </template>
       </button>
     </h2>
 
     <p v-if="errorGettingLocation" class="tip">
-      Failed to get your location.
+      فشل التعرف على موقعك.
     </p>
 
     <p>
-      Some members of the Vue community have so enriched it, that they deserve special mention. We've developed a more intimate relationship with these key partners, often coordinating with them on upcoming features and news.
+    بعض اعضاء مجتمع Vue قامو بالعديد من المساهمات ولذلك يستحقون ذكرهم بشكل مميز. لقد قمنا بتطوير علاقة جيدة جدا مع هؤلاء الشركاء، وغالباً ما نقوم بالتنسيق معهم بخصوص الاخبار والمميزات الجديدة.
     </p>
 
     <p v-if="userPosition" class="success">
-      The community partners have been sorted by their distance from you.
+      تم ترتيب شركاء مجتمع Vue بالاقرب الى موقعك.
     </p>
 
     <vuer-profile
@@ -266,34 +267,34 @@ order: 803
     'Kraków, Poland': [50.064650, 19.936579]
   }
   var languageNameFor = {
-    en: 'English',
-    nl: 'Nederlands',
-    zh: '中文',
-    vi: 'Tiếng Việt',
-    pl: 'Polski',
-    pt: 'Português',
-    ru: 'Русский',
-    jp: '日本語',
-    fr: 'Français',
-    de: 'Deutsch',
-    el: 'Ελληνικά',
-    es: 'Español',
-    hi: 'हिंदी',
-    fa: 'فارسی',
-    ko: '한국어',
-    ro: 'Română',
-    uk: 'Українська'
+    en: 'الانجليزية',
+    nl: 'الهولندية',
+    zh: 'الصينية',
+    vi: 'الڤيتنامية',
+    pl: 'البولندية',
+    pt: 'البرتغالية',
+    ru: 'الروسية',
+    jp: 'اليابانية',
+    fr: 'الفرنسية',
+    de: 'الالمانية',
+    el: 'اليونانية',
+    es: 'الاسبانية',
+    hi: 'الهندية',
+    fa: 'الفارسية',
+    ko: 'الكورية',
+    ro: 'الرومانية',
+    uk: 'الرومانية'
   }
 
   var team = [{
     name: 'Evan You',
     title: 'Benevolent Dictator For Life',
-    city: 'Jersey City, NJ, USA',
+    city: 'نيو جيرسي، الولايات المتحدة الامريكية',
     languages: ['zh', 'en'],
     github: 'yyx990803',
     twitter: 'youyuxi',
     work: {
-      role: 'Creator',
+      role: 'مبتكر',
       org: 'Vue.js'
     },
     reposOfficial: [

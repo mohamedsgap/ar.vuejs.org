@@ -1,5 +1,5 @@
 ---
-title: Performance Comparisons
+title: مقارنات الاداء
 ---
 
 ## TodoMVC Benchmark

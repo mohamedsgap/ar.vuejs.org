@@ -3,12 +3,12 @@
     <input
       class="search-query"
       v-model="search"
-      placeholder="Vue.js بحث"
+      placeholder="ابحث في Vue.js"
     >
     <div class="search-footer">
       <p>
         <template v-if="totalResults">
-          <strong>{{ totalResults }} نتيجة</strong>تم إيجادها في {{ queryTime }} ميلي-ثانية
+          <strong>تم ايجاد عدد {{ totalResults }} نتائج</strong> في خلال {{ queryTime }}مث
         </template>
       </p>
       <a target="_blank" href="https://www.algolia.com/">
@@ -25,7 +25,7 @@
     ></search-result>
   </template>
 
-  <p v-else>لا يوجد نتائج.</p>
+  <p v-else>لا يوجد نتائج للبحث.</p>
 
   <div ref="infiniteScrollAnchor"></div>
 
@@ -100,7 +100,7 @@ var searchPage = new Vue({
       this.updateSearch()
       window.history.pushState(
         {},
-        'Vue.js Search',
+        ' البحث في Vue.js',
         window.location.origin + window.location.pathname + '?q=' + encodeURIComponent(this.search)
       )
     }

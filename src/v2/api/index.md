@@ -1,33 +1,33 @@
 ---
-title: API
+title: واجهة برمجة التطبيقات (API)
 type: api
 ---
 
-## Global Config
+## الاعدادات العامة
 
-`Vue.config` is an object containing Vue's global configurations. You can modify its properties listed below before bootstrapping your application:
+`Vue.config` هو كائن يحتوي على إعدادات Vue العامة والمتوفرة لجميع العناصر الأخرى. يمكنك أن تغير خصائصه المذكورة بالأسفل قبل أن تقوم ببدء تطبيقك:
 
 ### silent
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
-- **Default:** `false`
+- **القيمة الافتراضية:** `false`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   ``` js
   Vue.config.silent = true
   ```
 
-  Suppress all Vue logs and warnings.
+  منع ظهور جميع سجلات وتحذيرات Vue.
 
 ### optionMergeStrategies
 
-- **Type:** `{ [key: string]: Function }`
+- **النوع:** `{ [key: string]: Function }`
 
-- **Default:** `{}`
+- **القيمة الافتراضية:** `{}`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   ``` js
   Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
@@ -49,26 +49,26 @@ type: api
 
 ### devtools
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
-- **Default:** `true` (`false` in production builds)
+- **القيمة الافتراضية:** `true` (`false` في وضع الاخراج النهائي)
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   ``` js
   // make sure to set this synchronously immediately after loading Vue
   Vue.config.devtools = true
   ```
 
-  Configure whether to allow [vue-devtools](https://github.com/vuejs/vue-devtools) inspection. This option's default value is `true` in development builds and `false` in production builds. You can set it to `true` to enable inspection for production builds.
+  اعداد يسمح لـ[ادوات مطوري Vue](https://github.com/vuejs/vue-devtools) بالعمل في وضع فحص المستعرض (inspection). القيمة الافتراضية لهذا الاعداد هي `true` في وضع التطوير و `false` في وضع الاخراج النهائي. كما يمكنك جعلها `true` للسماح بتشغيلها في وضع الاخراج النهائي.
 
 ### errorHandler
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
-- **Default:** `undefined`
+- **القيمة الافتراضية:** `undefined`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   ``` js
   Vue.config.errorHandler = function (err, vm, info) {
@@ -90,13 +90,13 @@ type: api
 
 ### warnHandler
 
-> New in 2.4.0+
+جديد في الاصدار 2.4.0+
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
-- **Default:** `undefined`
+- **القيمة الافتراضية:** `undefined`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   ``` js
   Vue.config.warnHandler = function (msg, vm, trace) {
@@ -108,11 +108,11 @@ type: api
 
 ### ignoredElements
 
-- **Type:** `Array<string | RegExp>`
+- **النوع:** `Array<string | RegExp>`
 
-- **Default:** `[]`
+- **القيمة الافتراضية:** `[]`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   ``` js
   Vue.config.ignoredElements = [
@@ -128,11 +128,11 @@ type: api
 
 ### keyCodes
 
-- **Type:** `{ [key: string]: number | Array<number> }`
+- **النوع:** `{ [key: string]: number | Array<number> }`
 
-- **Default:** `{}`
+- **القيمة الافتراضية:** `{}`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   ``` js
   Vue.config.keyCodes = {
@@ -154,25 +154,25 @@ type: api
 
 ### performance
 
-> New in 2.2.0+
+> جديد في الاصدار 2.2.0+
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
-- **Default:** `false (from 2.2.3+)`
+- **القيمة الافتراضية:** `false (from 2.2.3+)`
 
-- **Usage**:
+- **طريقة الاستخدام**:
 
   Set this to `true` to enable component init, compile, render and patch performance tracing in the browser devtool performance/timeline panel. Only works in development mode and in browsers that support the [performance.mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) API.
 
 ### productionTip
 
-> New in 2.2.0+
+جديد في الاصدار 2.2.0+
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
-- **Default:** `true`
+- **القيمة الافتراضية:** `true`
 
-- **Usage**:
+- **طريقة الاستخدام**:
 
   Set this to `false` to prevent the production tip on Vue startup.
 
@@ -183,7 +183,7 @@ type: api
 - **Arguments:**
   - `{Object} options`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Create a "subclass" of the base Vue constructor. The argument should be an object containing component options.
 
@@ -223,7 +223,7 @@ type: api
   - `{Function} [callback]`
   - `{Object} [context]`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Defer the callback to be executed after the next DOM update cycle. Use it immediately after you've changed some data to wait for the DOM update.
 
@@ -242,7 +242,7 @@ type: api
     })
   ```
 
-  > New in 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment. Please note that Vue does not come with a Promise polyfill, so if you target browsers that don't support Promises natively (looking at you, IE), you will have to provide a polyfill yourself.
+  جديد في الاصدار 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment. Please note that Vue does not come with a Promise polyfill, so if you target browsers that don't support Promises natively (looking at you, IE), you will have to provide a polyfill yourself.
 
 - **See also:** [Async Update Queue](../guide/reactivity.html#Async-Update-Queue)
 
@@ -255,7 +255,7 @@ type: api
 
 - **Returns:** the set value.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Adds a property to a reactive object, ensuring the new property is also reactive, so triggers view updates. This must be used to add new properties to reactive objects, as Vue cannot detect normal property additions (e.g. `this.myObject.newProperty = 'hi'`).
 
@@ -271,7 +271,7 @@ type: api
 
   > Only in 2.2.0+: Also works with Array + index.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Delete a property on an object. If the object is reactive, ensure the deletion triggers view updates. This is primarily used to get around the limitation that Vue cannot detect property deletions, but you should rarely need to use it.
 
@@ -285,7 +285,7 @@ type: api
   - `{string} id`
   - `{Function | Object} [definition]`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Register or retrieve a global directive.
 
@@ -316,7 +316,7 @@ type: api
   - `{string} id`
   - `{Function} [definition]`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Register or retrieve a global filter.
 
@@ -338,7 +338,7 @@ type: api
   - `{string} id`
   - `{Function | Object} [definition]`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Register or retrieve a global component. Registration also automatically sets the component's `name` with the given `id`.
 
@@ -360,7 +360,7 @@ type: api
 - **Arguments:**
   - `{Object | Function} plugin`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Install a Vue.js plugin. If the plugin is an Object, it must expose an `install` method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument.
 
@@ -375,7 +375,7 @@ type: api
 - **Arguments:**
   - `{Object} mixin`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Apply a mixin globally, which affects every Vue instance created afterwards. This can be used by plugin authors to inject custom behavior into components. **Not recommended in application code**.
 
@@ -386,7 +386,7 @@ type: api
 - **Arguments:**
   - `{string} template`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Compiles a template string into a render function. **Only available in the full build.**
 
@@ -406,12 +406,12 @@ type: api
 
 ### Vue.observable( object )
 
-> New in 2.6.0+
+جديد في الاصدار 2.6.0+
 
 - **Arguments:**
   - `{Object} object`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Make an object reactive. Internally, Vue uses this on the object returned by the `data` function.
 
@@ -437,7 +437,7 @@ type: api
 
 - **Details**: Provides the installed version of Vue as a string. This is especially useful for community plugins and components, where you might use different strategies for different versions.
 
-- **Usage**:
+- **طريقة الاستخدام**:
 
   ```js
   var version = Number(Vue.version.split('.')[0])
@@ -455,7 +455,7 @@ type: api
 
 ### data
 
-- **Type:** `Object | Function`
+- **النوع:** `Object | Function`
 
 - **Restriction:** Only accepts `Function` when used in a component definition.
 
@@ -503,7 +503,7 @@ type: api
 
 ### props
 
-- **Type:** `Array<string> | Object`
+- **النوع:** `Array<string> | Object`
 
 - **Details:**
 
@@ -548,7 +548,7 @@ type: api
 
 ### propsData
 
-- **Type:** `{ [key: string]: any }`
+- **النوع:** `{ [key: string]: any }`
 
 - **Restriction:** only respected in instance creation via `new`.
 
@@ -573,7 +573,7 @@ type: api
 
 ### computed
 
-- **Type:** `{ [key: string]: Function | { get: Function, set: Function } }`
+- **النوع:** `{ [key: string]: Function | { get: Function, set: Function } }`
 
 - **Details:**
 
@@ -620,7 +620,7 @@ type: api
 
 ### methods
 
-- **Type:** `{ [key: string]: Function }`
+- **النوع:** `{ [key: string]: Function }`
 
 - **Details:**
 
@@ -647,7 +647,7 @@ type: api
 
 ### watch
 
-- **Type:** `{ [key: string]: string | Function | Object | Array}`
+- **النوع:** `{ [key: string]: string | Function | Object | Array}`
 
 - **Details:**
 
@@ -707,7 +707,7 @@ type: api
 
 ### el
 
-- **Type:** `string | Element`
+- **النوع:** `string | Element`
 
 - **Restriction:** only respected in instance creation via `new`.
 
@@ -729,7 +729,7 @@ type: api
 
 ### template
 
-- **Type:** `string`
+- **النوع:** `string`
 
 - **Details:**
 
@@ -747,7 +747,7 @@ type: api
 
 ### render
 
-  - **Type:** `(createElement: () => VNode) => VNode`
+  - **النوع:** `(createElement: () => VNode) => VNode`
 
   - **Details:**
 
@@ -761,9 +761,9 @@ type: api
 
 ### renderError
 
-> New in 2.2.0+
+جديد في الاصدار 2.2.0+
 
-  - **Type:** `(createElement: () => VNode, error: Error) => VNode`
+  - **النوع:** `(createElement: () => VNode, error: Error) => VNode`
 
   - **Details:**
 
@@ -792,7 +792,7 @@ type: api
 
 ### beforeCreate
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -802,7 +802,7 @@ type: api
 
 ### created
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -812,7 +812,7 @@ type: api
 
 ### beforeMount
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -824,7 +824,7 @@ type: api
 
 ### mounted
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -847,7 +847,7 @@ type: api
 
 ### beforeUpdate
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -859,7 +859,7 @@ type: api
 
 ### updated
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -884,7 +884,7 @@ type: api
 
 ### activated
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -898,7 +898,7 @@ type: api
 
 ### deactivated
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -912,7 +912,7 @@ type: api
 
 ### beforeDestroy
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -924,7 +924,7 @@ type: api
 
 ### destroyed
 
-- **Type:** `Function`
+- **النوع:** `Function`
 
 - **Details:**
 
@@ -936,9 +936,9 @@ type: api
 
 ### errorCaptured
 
-> New in 2.5.0+
+جديد في الاصدار 2.5.0+
 
-- **Type:** `(err: Error, vm: Component, info: string) => ?boolean`
+- **النوع:** `(err: Error, vm: Component, info: string) => ?boolean`
 
 - **Details:**
 
@@ -960,7 +960,7 @@ type: api
 
 ### directives
 
-- **Type:** `Object`
+- **النوع:** `Object`
 
 - **Details:**
 
@@ -970,7 +970,7 @@ type: api
 
 ### filters
 
-- **Type:** `Object`
+- **النوع:** `Object`
 
 - **Details:**
 
@@ -980,7 +980,7 @@ type: api
 
 ### components
 
-- **Type:** `Object`
+- **النوع:** `Object`
 
 - **Details:**
 
@@ -992,7 +992,7 @@ type: api
 
 ### parent
 
-- **Type:** `Vue instance`
+- **النوع:** `Vue instance`
 
 - **Details:**
 
@@ -1002,7 +1002,7 @@ type: api
 
 ### mixins
 
-- **Type:** `Array<Object>`
+- **النوع:** `Array<Object>`
 
 - **Details:**
 
@@ -1028,7 +1028,7 @@ type: api
 
 ### extends
 
-- **Type:** `Object | Function`
+- **النوع:** `Object | Function`
 
 - **Details:**
 
@@ -1050,9 +1050,9 @@ type: api
 
 ### provide / inject
 
-> New in 2.2.0+
+جديد في الاصدار 2.2.0+
 
-- **Type:**
+- **النوع:**
   - **provide:** `Object | () => Object`
   - **inject:** `Array<string> | { [key: string]: string | Symbol | Object }`
 
@@ -1181,7 +1181,7 @@ type: api
 
 ### name
 
-- **Type:** `string`
+- **النوع:** `string`
 
 - **Restriction:** only respected when used as a component option.
 
@@ -1193,9 +1193,9 @@ type: api
 
 ### delimiters
 
-- **Type:** `Array<string>`
+- **النوع:** `Array<string>`
 
-- **Default:** `{% raw %}["{{", "}}"]{% endraw %}`
+- **القيمة الافتراضية:** `{% raw %}["{{", "}}"]{% endraw %}`
 
 - **Restrictions:** This option is only available in the full build, with in-browser compilation.
 
@@ -1215,7 +1215,7 @@ type: api
 
 ### functional
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
 - **Details:**
 
@@ -1225,9 +1225,9 @@ type: api
 
 ### model
 
-> New in 2.2.0
+جديد في الاصدار 2.2.0
 
-- **Type:** `{ prop?: string, event?: string }`
+- **النوع:** `{ prop?: string, event?: string }`
 
 - **Details:**
 
@@ -1270,11 +1270,11 @@ type: api
 
 ### inheritAttrs
 
-> New in 2.4.0+
+جديد في الاصدار 2.4.0+
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
-- **Default:** `true`
+- **القيمة الافتراضية:** `true`
 
 - **Details:**
 
@@ -1284,11 +1284,11 @@ type: api
 
 ### comments
 
-> New in 2.4.0+
+جديد في الاصدار 2.4.0+
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
-- **Default:** `false`
+- **القيمة الافتراضية:** `false`
 
 - **Restrictions:** This option is only available in the full build, with in-browser compilation.
 
@@ -1300,7 +1300,7 @@ type: api
 
 ### vm.$data
 
-- **Type:** `Object`
+- **النوع:** `Object`
 
 - **Details:**
 
@@ -1310,9 +1310,9 @@ type: api
 
 ### vm.$props
 
-> New in 2.2.0+
+جديد في الاصدار 2.2.0+
 
-- **Type:** `Object`
+- **النوع:** `Object`
 
 - **Details:**
 
@@ -1320,7 +1320,7 @@ type: api
 
 ### vm.$el
 
-- **Type:** `Element`
+- **النوع:** `Element`
 
 - **Read only**
 
@@ -1330,7 +1330,7 @@ type: api
 
 ### vm.$options
 
-- **Type:** `Object`
+- **النوع:** `Object`
 
 - **Read only**
 
@@ -1349,7 +1349,7 @@ type: api
 
 ### vm.$parent
 
-- **Type:** `Vue instance`
+- **النوع:** `Vue instance`
 
 - **Read only**
 
@@ -1359,7 +1359,7 @@ type: api
 
 ### vm.$root
 
-- **Type:** `Vue instance`
+- **النوع:** `Vue instance`
 
 - **Read only**
 
@@ -1369,7 +1369,7 @@ type: api
 
 ### vm.$children
 
-- **Type:** `Array<Vue instance>`
+- **النوع:** `Array<Vue instance>`
 
 - **Read only**
 
@@ -1379,7 +1379,7 @@ type: api
 
 ### vm.$slots
 
-- **Type:** `{ [name: string]: ?Array<VNode> }`
+- **النوع:** `{ [name: string]: ?Array<VNode> }`
 
 - **Read only**
 
@@ -1431,9 +1431,9 @@ type: api
 
 ### vm.$scopedSlots
 
-> New in 2.1.0+
+جديد في الاصدار 2.1.0+
 
-- **Type:** `{ [name: string]: props => Array<VNode> | undefined }`
+- **النوع:** `{ [name: string]: props => Array<VNode> | undefined }`
 
 - **Read only**
 
@@ -1456,7 +1456,7 @@ type: api
 
 ### vm.$refs
 
-- **Type:** `Object`
+- **النوع:** `Object`
 
 - **Read only**
 
@@ -1470,7 +1470,7 @@ type: api
 
 ### vm.$isServer
 
-- **Type:** `boolean`
+- **النوع:** `boolean`
 
 - **Read only**
 
@@ -1482,9 +1482,9 @@ type: api
 
 ### vm.$attrs
 
-> New in 2.4.0+
+جديد في الاصدار 2.4.0+
 
-- **Type:** `{ [key: string]: string }`
+- **النوع:** `{ [key: string]: string }`
 
 - **Read only**
 
@@ -1494,9 +1494,9 @@ type: api
 
 ### vm.$listeners
 
-> New in 2.4.0+
+جديد في الاصدار 2.4.0+
 
-- **Type:** `{ [key: string]: Function | Array<Function> }`
+- **النوع:** `{ [key: string]: Function | Array<Function> }`
 
 - **Read only**
 
@@ -1517,7 +1517,7 @@ type: api
 
 - **Returns:** `{Function} unwatch`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Watch an expression or a computed function on the Vue instance for changes. The callback gets called with the new value and the old value. The expression only accepts dot-delimited paths. For more complex expressions, use a function instead.
 
@@ -1614,7 +1614,7 @@ type: api
 
 - **Returns:** the set value.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   This is the **alias** of the global `Vue.set`.
 
@@ -1626,7 +1626,7 @@ type: api
   - `{Object | Array} target`
   - `{string | number} propertyName/index`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   This is the **alias** of the global `Vue.delete`.
 
@@ -1640,7 +1640,7 @@ type: api
   - `{string | Array<string>} event` (array only supported in 2.2.0+)
   - `{Function} callback`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Listen for a custom event on the current vm. Events can be triggered by `vm.$emit`. The callback will receive all the additional arguments passed into these event-triggering methods.
 
@@ -1660,7 +1660,7 @@ type: api
   - `{string} event`
   - `{Function} callback`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Listen for a custom event, but only once. The listener will be removed once it triggers for the first time.
 
@@ -1670,7 +1670,7 @@ type: api
   - `{string | Array<string>} event` (array only supported in 2.2.2+)
   - `{Function} [callback]`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Remove custom event listener(s).
 
@@ -1823,7 +1823,7 @@ type: api
 
 - **Returns:** `vm` - the instance itself
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   If a Vue instance didn't receive the `el` option at instantiation, it will be in "unmounted" state, without an associated DOM element. `vm.$mount()` can be used to manually start the mounting of an unmounted Vue instance.
 
@@ -1855,7 +1855,7 @@ type: api
 
 ### vm.$forceUpdate()
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Force the Vue instance to re-render. Note it does not affect all child components, only the instance itself and child components with inserted slot content.
 
@@ -1864,11 +1864,11 @@ type: api
 - **Arguments:**
   - `{Function} [callback]`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Defer the callback to be executed after the next DOM update cycle. Use it immediately after you've changed some data to wait for the DOM update. This is the same as the global `Vue.nextTick`, except that the callback's `this` context is automatically bound to the instance calling this method.
 
-  > New in 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment. Please note that Vue does not come with a Promise polyfill, so if you target browsers that don't support Promises natively (looking at you, IE), you will have to provide a polyfill yourself.
+  جديد في الاصدار 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment. Please note that Vue does not come with a Promise polyfill, so if you target browsers that don't support Promises natively (looking at you, IE), you will have to provide a polyfill yourself.
 
 - **Example:**
 
@@ -1897,7 +1897,7 @@ type: api
 
 ### vm.$destroy()
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Completely destroy a vm. Clean up its connections with other existing vms, unbind all its directives, turn off all event listeners.
 
@@ -1951,7 +1951,7 @@ type: api
 
 - **Expects:** `any`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Toggles the element's `display` CSS property based on the truthy-ness of the expression value.
 
@@ -1963,7 +1963,7 @@ type: api
 
 - **Expects:** `any`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Conditionally render the element based on the truthy-ness of the expression value. The element and its contained directives / components are destroyed and re-constructed during toggles. If the element is a `<template>` element, its content will be extracted as the conditional block.
 
@@ -1979,7 +1979,7 @@ type: api
 
 - **Restriction:** previous sibling element must have `v-if` or `v-else-if`.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Denote the "else block" for `v-if` or a `v-if`/`v-else-if` chain.
 
@@ -1996,13 +1996,13 @@ type: api
 
 ### v-else-if
 
-> New in 2.1.0+
+جديد في الاصدار 2.1.0+
 
 - **Expects:** `any`
 
 - **Restriction:** previous sibling element must have `v-if` or `v-else-if`.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Denote the "else if block" for `v-if`. Can be chained.
 
@@ -2027,7 +2027,7 @@ type: api
 
 - **Expects:** `Array | Object | number | string | Iterable (since 2.6)`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Render the element or template block multiple times based on the source data. The directive's value must use the special syntax `alias in expression` to provide an alias for the current element being iterated on:
 
@@ -2084,7 +2084,7 @@ type: api
   - `.middle` - (2.2.0+) only trigger handler for middle button mouse events.
   - `.passive` - (2.3.0+) attaches a DOM event with `{ passive: true }`.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Attaches an event listener to the element. The event type is denoted by the argument. The expression can be a method name, an inline statement, or omitted if there are modifiers present.
 
@@ -2166,7 +2166,7 @@ type: api
   - `.camel` - (2.1.0+) transform the kebab-case attribute name into camelCase.
   - `.sync` - (2.3.0+) a syntax sugar that expands into a `v-on` handler for updating the bound value.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Dynamically bind one or more attributes, or a component prop to an expression.
 
@@ -2247,7 +2247,7 @@ type: api
   - [`.number`](../guide/forms.html#number) - cast valid input string to numbers
   - [`.trim`](../guide/forms.html#trim) - trim input
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Create a two-way binding on a form input element or a component. For detailed usage and other notes, see the Guide section linked below.
 
@@ -2267,7 +2267,7 @@ type: api
   - `<template>`
   - [components](../guide/components-slots.html#Abbreviated-Syntax-for-Lone-Default-Slots) (for a lone default slot with props)
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Denote named slots or slots that expect to receive props.
 
@@ -2312,7 +2312,7 @@ type: api
 
 - **Does not expect expression**
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Skip compilation for this element and all its children. You can use this for displaying raw mustache tags. Skipping large numbers of nodes with no directives on them can also speed up compilation.
 
@@ -2326,7 +2326,7 @@ type: api
 
 - **Does not expect expression**
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   This directive will remain on the element until the associated Vue instance finishes compilation. Combined with CSS rules such as `[v-cloak] { display: none }`, this directive can be used to hide un-compiled mustache bindings until the Vue instance is ready.
 
@@ -2468,7 +2468,7 @@ type: api
 
 - **Expects:** `function argument expression`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Used to denote an element or component as a scoped slot. The attribute's value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for [`scope`](#scope-replaced) in 2.5.0+.
 
@@ -2482,7 +2482,7 @@ type: api
 
 Used to denote a `<template>` element as a scoped slot.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   Same as [`slot-scope`](#slot-scope) except that `scope` can only be used on `<template>` elements.
 
@@ -2494,7 +2494,7 @@ Used to denote a `<template>` element as a scoped slot.
   - `is` - string | ComponentDefinition | ComponentConstructor
   - `inline-template` - boolean
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   A "meta component" for rendering dynamic components. The actual component to render is determined by the `is` prop:
 
@@ -2542,7 +2542,7 @@ Used to denote a `<template>` element as a scoped slot.
   - `leave-cancelled` (`v-show` only)
   - `appear-cancelled`
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   `<transition>` serve as transition effects for **single** element/component. The `<transition>` only applies the transition behavior to the wrapped content inside; it doesn't render an extra DOM element, or show up in the inspected component hierarchy.
 
@@ -2589,7 +2589,7 @@ Used to denote a `<template>` element as a scoped slot.
 - **Events:**
   - exposes the same events as `<transition>`.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   `<transition-group>` serve as transition effects for **multiple** elements/components. The `<transition-group>` renders a real DOM element. By default it renders a `<span>`, and you can configure what element it should render via the `tag` attribute.
 
@@ -2614,7 +2614,7 @@ Used to denote a `<template>` element as a scoped slot.
   - `exclude` - string or RegExp or Array. Any component with a matching name will not be cached.
   - `max` - number. The maximum number of component instances to cache.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   When wrapped around a dynamic component, `<keep-alive>` caches the inactive component instances without destroying them. Similar to `<transition>`, `<keep-alive>` is an abstract component: it doesn't render a DOM element itself, and doesn't show up in the component parent chain.
 
@@ -2648,7 +2648,7 @@ Used to denote a `<template>` element as a scoped slot.
 
 - **`include` and `exclude`**
 
-  > New in 2.1.0+
+  جديد في الاصدار 2.1.0+
 
   The `include` and `exclude` props allow components to be conditionally cached. Both props can be a comma-delimited string, a RegExp or an Array:
 
@@ -2673,7 +2673,7 @@ Used to denote a `<template>` element as a scoped slot.
 
 - **`max`**
 
-  > New in 2.5.0+
+  جديد في الاصدار 2.5.0+
 
   The maximum number of component instances to cache. Once this number is reached, the cached component instance that was least recently accessed will be destroyed before creating a new instance.
 
@@ -2692,7 +2692,7 @@ Used to denote a `<template>` element as a scoped slot.
 - **Props:**
   - `name` - string, Used for named slot.
 
-- **Usage:**
+- **طريقة الاستخدام:**
 
   `<slot>` serve as content distribution outlets in component templates. `<slot>` itself will be replaced.
 

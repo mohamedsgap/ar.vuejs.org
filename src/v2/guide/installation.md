@@ -1,76 +1,73 @@
 ---
-title: Installation
+title: التركيب
 type: guide
 order: 1
 vue_version: 2.5.16
 gz_size: "30.90"
 ---
 
-### Compatibility Note
+### ملاحظة عن التوافق
 
-Vue does **not** support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all [ECMAScript 5 compliant browsers](https://caniuse.com/#feat=es5).
+يرجى ملاحظة أن Vue **لا تدعم** مستعرض إنترنت إكسبلورر 8 فأقل, لأنه يستخدم مميزات خاصة من الإصدار الخامس من ECMAScript والذي لا يتيح التحديثات الدورية لهذه المميزات. على أي حال, فإنها تدعم [جميع المستعرضات الاخرى المتوافقة مع الاصدار الخامس من ECMAScript](https://caniuse.com/#feat=es5).
 
-### Release Notes
+### ملاحظات الإصدار
 
-Latest stable version: {{vue_version}}
+أخر إصدار مستقر: {{vue_version}}
 
-Detailed release notes for each version are available on [GitHub](https://github.com/vuejs/vue/releases).
+ملاحظات أخرى تخص الإصدارات الأخرى متاحة على [GitHub](https://github.com/vuejs/vue/releases).
 
-## Vue Devtools
+## أدوات مطوري Vue
 
-When using Vue, we recommend also installing the [Vue Devtools](https://github.com/vuejs/vue-devtools#vue-devtools) in your browser, allowing you to inspect and debug your Vue applications in a more user-friendly interface.
+عند إستخدام Vue, ننصح أيضاً بتركيب [أدوات مطوري Vue](https://github.com/vuejs/vue-devtools#vue-devtools) في المستعرض الخاص بك, والتي تسمح لك بتفحص وتصحيح تطبيقا Vue في واجهة مستخدم ذات قابلية عالية.
 
-## Direct `<script>` Include
+## بإستخدام تضمين وسم `<script>` مباشرة
 
-Simply download and include with a script tag. `Vue` will be registered as a global variable.
+ببساطة ق بتحميل وتضمين Vue بإستخدام وسم script. سيتم تسجيل Vue كمتغير متاح لجميع عناصر الصفحة.
 
-<p class="tip">Don't use the minified version during development. You will miss out on all the nice warnings for common mistakes!</p>
+
+<p class="tip">لا تستخدم الإصدار المصغر أثناء التطوير. سوف يفوتك كل التحذيرات الرائعة لأغلب المشكلات.</p>
 
 <div id="downloads">
-  <a class="button" href="/js/vue.js" download>Development Version</a><span class="light info">With full warnings and debug mode</span>
+  <a class="button" href="/js/vue.js" download>نسخة التطوير</a><span class="light info">مع التحذيرات الكاملة ووضع تصحيح الأخطاء.</span>
 
-  <a class="button" href="/js/vue.min.js" download>Production Version</a><span class="light info">Warnings stripped, {{gz_size}}KB min+gzip</span>
+  <a class="button" href="/js/vue.min.js" download>نسخة الإنتاج</a><span class="light info">بدون تحذيرات, وبحجم {{gz_size}} كيلو بايت مصغرة و مضغوطة بإستخدام gzip</span>
 </div>
 
-### CDN
+### شبكة توصيل المحتوى
 
-For prototyping or learning purposes, you can use the latest version with:
+لأغراض التعلم أو عمل النماذج المصغرة، يمكنك إستخدام الإصدار الأحدث :
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 ```
-
-For production, we recommend linking to a specific version number and build to avoid unexpected breakage from newer versions:
+للإنتاج، ننصح بالربط مع إصدار مخصص لتفادي الكسر غير المتوقع من الإصدارات الأحدث:
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
 ```
-
-If you are using native ES Modules, there is also an ES Modules compatible build:
+إذا كنت تستخدم وحدات چاڤاسكريبت، يوجد أيضاً إصدار متوافق مع وحدات چاڤاسكريبت:
 
 ``` html
 <script type="module">
   import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.esm.browser.js'
 </script>
 ```
+يمكنك إستعراض الكود المصدري الخاص برزمة NPM من هنا [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/).
 
-You can browse the source of the NPM package at [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/).
+Vue أيضاً متوفرة على [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) و [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) (cdnjs تأخذ بعض الوقت للتزامن، لذا قد لا يتوفر أخر إصدار بعد).
 
-Vue is also available on [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) and [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) (cdnjs takes some time to sync so the latest release may not be available yet).
+قم بالتأكد بأن تقرأ [الإصدارات المختلفة من Vue](#Explanation-of-Different-Builds) وأن تستخدم **النسخة الخاصة بالإنتاج** في موقعك المنشور، وإستبدال `vue.js` بـ `vue.min.js`. هذا الإصدار أقل في الحجم ومحسن للمزيد من السرعه بدلاً من خبرة التطوير.
 
-Make sure to read about [the different builds of Vue](#Explanation-of-Different-Builds) and use the **production
- version** in your published site, replacing `vue.js` with `vue.min.js`. This is a smaller build optimized for speed instead of development experience.
+## NPM (أداة Node لإدارة المكتبات)
 
-## NPM
-
-NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/). Vue also provides accompanying tools for authoring [Single File Components](single-file-components.html).
+NPM هي الأداة الموصى بإصتخدامها عند بناء تطبيقات كبيرة الحجم بإستخدام Vue. فهي تعمل جيداً مع أدوات التجميع مثل [Webpack](https://webpack.js.org/) و [Browserify](http://browserify.org/). Vue أيضاً توفر أدوات خاصة بالإصدار مثل [Single File Components](single-file-components.html).
 
 ``` bash
 # latest stable
 $ npm install vue
 ```
 
-## CLI
+## CLI (أدوات سطر الأوامر)
 
 Vue provides an [official CLI](https://github.com/vuejs/vue-cli) for quickly scaffolding ambitious Single Page Applications. It provides batteries-included build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds. See [the Vue CLI docs](https://cli.vuejs.org) for more details.
 
@@ -252,9 +249,9 @@ Some environments, such as Google Chrome Apps, enforce Content Security Policy (
 
 On the other hand, the runtime-only build is fully CSP-compliant. When using the runtime-only build with [Webpack + vue-loader](https://github.com/vuejs-templates/webpack-simple) or [Browserify + vueify](https://github.com/vuejs-templates/browserify-simple), your templates will be precompiled into `render` functions which work perfectly in CSP environments.
 
-## Dev Build
+## إصدار التطوير
 
-**Important**: the built files in GitHub's `/dist` folder are only checked-in during releases. To use Vue from the latest source code on GitHub, you will have to build it yourself!
+**هام**: الملفات المبنية في مجلد `/dist` على GitHub تم فحصها فقط أثناء الإصدارات. لإستخدام Vue أخر إصدار سيكون من الكود المصدري على GitHub، سيتوجب عليك أن تقوم ببنائها بنفسك!
 
 ``` bash
 git clone https://github.com/vuejs/vue.git node_modules/vue
@@ -265,13 +262,13 @@ npm run build
 
 ## Bower
 
-Only UMD builds are available from Bower.
+وحدات UMD فقط هي المتاحة من Bower.
 
 ``` bash
 # latest stable
 $ bower install vue
 ```
 
-## AMD Module Loaders
+## وحدات تحميل AMD
 
-All UMD builds can be used directly as an AMD module.
+جميع إصدارات UMD يمكن إستخدامها كوحدة AMD.

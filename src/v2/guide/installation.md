@@ -8,34 +8,34 @@ gz_size: "30.90"
 
 ### ملاحظة عن التوافق
 
-يرجى ملاحظة أن Vue **لا تدعم** مستعرض إنترنت إكسبلورر 8 فأقل, لأنه يستخدم مميزات خاصة من الإصدار الخامس من ECMAScript والذي لا يتيح التحديثات الدورية لهذه المميزات. على أي حال, فإنها تدعم [جميع المستعرضات الاخرى المتوافقة مع الاصدار الخامس من ECMAScript](https://caniuse.com/#feat=es5).
+يرجى ملاحظة أن Vue **لا تدعم** مستعرض إنترنت إكسبلورر 8 فأقل، لأنه يستخدم مميزات خاصة من الإصدار الخامس من ECMAScript والذي لا يتيح التحديثات الدورية لهذه المميزات. على أي حال, فإنها تدعم [جميع المستعرضات الاخرى المتوافقة مع الاصدار الخامس من ECMAScript](https://caniuse.com/#feat=es5).
 
 ### ملاحظات الإصدار
 
-أخر إصدار مستقر: {{vue_version}}
+آخر إصدار مستقر: {{vue_version}}
 
 ملاحظات أخرى تخص الإصدارات الأخرى متاحة على [GitHub](https://github.com/vuejs/vue/releases).
 
 ## أدوات مطوري Vue
 
-عند إستخدام Vue, ننصح أيضاً بتركيب [أدوات مطوري Vue](https://github.com/vuejs/vue-devtools#vue-devtools) في المستعرض الخاص بك, والتي تسمح لك بتفحص وتصحيح تطبيقا Vue في واجهة مستخدم ذات قابلية عالية.
+عند استخدام Vue, ننصح أيضاً بتركيب [أدوات مطوري Vue](https://github.com/vuejs/vue-devtools#vue-devtools) في المستعرض الخاص بك, والتي تسمح لك بتفحص وتصحيح تطبيقا Vue في واجهة مستخدم ذات قابلية عالية.
 
-## بإستخدام تضمين وسم `<script>` مباشرة
+## باستخدام تضمين وسم `<script>` مباشرة
 
-ببساطة ق بتحميل وتضمين Vue بإستخدام وسم script. سيتم تسجيل Vue كمتغير متاح لجميع عناصر الصفحة.
+ببساطة قم بتحميل وتضمين Vue باستخدام وسم script. سيتم تسجيل Vue كمتغير عالمي.
 
 
-<p class="tip">لا تستخدم الإصدار المصغر أثناء التطوير. سوف يفوتك كل التحذيرات الرائعة لأغلب المشكلات.</p>
+<p class="tip">لا تستخدم الإصدار المصغر أثناء التطوير. سوف تفوتك كل التحذيرات الرائعة لأغلب المشكلات.</p>
 
 <div id="downloads">
   <a class="button" href="/js/vue.js" download>نسخة التطوير</a><span class="light info">مع التحذيرات الكاملة ووضع تصحيح الأخطاء.</span>
 
-  <a class="button" href="/js/vue.min.js" download>نسخة الإنتاج</a><span class="light info">بدون تحذيرات, وبحجم {{gz_size}} كيلو بايت مصغرة و مضغوطة بإستخدام gzip</span>
+  <a class="button" href="/js/vue.min.js" download>نسخة الإنتاج</a><span class="light info">دون تحذيرات، وبحجم {{gz_size}} كيلو بايت مصغرة و مضغوطة باستخدام gzip</span>
 </div>
 
 ### شبكة توصيل المحتوى
 
-لأغراض التعلم أو عمل النماذج المصغرة، يمكنك إستخدام الإصدار الأحدث :
+لأغراض التعلم أو عمل النماذج المصغرة، يمكنك استخدام الإصدار الأحدث :
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -45,16 +45,16 @@ gz_size: "30.90"
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
 ```
-إذا كنت تستخدم وحدات چاڤاسكريبت، يوجد أيضاً إصدار متوافق مع وحدات چاڤاسكريبت:
+إذا كنت تستخدم وحدات JavaScript، يوجد أيضاً إصدار متوافق مع وحدات JavaScript:
 
 ``` html
 <script type="module">
   import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.esm.browser.js'
 </script>
 ```
-يمكنك إستعراض الكود المصدري الخاص برزمة NPM من هنا [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/).
+يمكنك استعراض الكود المصدري الخاص برزمة NPM من هنا [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/).
 
-Vue أيضاً متوفرة على [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) و [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) (cdnjs تأخذ بعض الوقت للتزامن، لذا قد لا يتوفر أخر إصدار بعد).
+Vue أيضاً متوفرة على [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) و [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) (cdnjs تأخذ بعض الوقت للتزامن، لذا قد لا يتوفر آخر إصدار بعد).
 
 قم بالتأكد بأن تقرأ [الإصدارات المختلفة من Vue](#Explanation-of-Different-Builds) وأن تستخدم **النسخة الخاصة بالإنتاج** في موقعك المنشور، وإستبدال `vue.js` بـ `vue.min.js`. هذا الإصدار أقل في الحجم ومحسن للمزيد من السرعه بدلاً من خبرة التطوير.
 

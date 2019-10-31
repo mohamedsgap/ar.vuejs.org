@@ -45,6 +45,7 @@ gz_size: "30.90"
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
 ```
+
 إذا كنت تستخدم وحدات JavaScript، يوجد أيضاً إصدار متوافق مع وحدات JavaScript:
 
 ``` html

@@ -53,6 +53,7 @@ gz_size: "30.90"
   import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.esm.browser.js'
 </script>
 ```
+
 يمكنك استعراض الكود المصدري الخاص برزمة NPM من هنا [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/).
 
 Vue أيضاً متوفرة على [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) و [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) (cdnjs تأخذ بعض الوقت للتزامن، لذا قد لا يتوفر آخر إصدار بعد).

@@ -60,7 +60,7 @@ Vue أيضاً متوفرة على [unpkg](https://unpkg.com/vue@{{vue_version}}
 
 قم بالتأكد بأن تقرأ [الإصدارات المختلفة من Vue](#Explanation-of-Different-Builds) وأن تستخدم **النسخة الخاصة بالإنتاج** في موقعك المنشور، وإستبدال `vue.js` بـ `vue.min.js`. هذا الإصدار أقل في الحجم ومحسن للمزيد من السرعه بدلاً من خبرة التطوير.
 
-## NPM ( مدير حزم Node.js ) 
+## NPM ( مدير حزم Node.js )
 
 NPM هي الأداة الموصى بإصتخدامها عند بناء تطبيقات كبيرة الحجم بإستخدام Vue. فهي تعمل جيداً مع أدوات التجميع مثل [Webpack](https://webpack.js.org/) و [Browserify](http://browserify.org/). Vue أيضاً توفر أدوات خاصة بالإصدار مثل [Single File Components](single-file-components.html).
 
@@ -71,28 +71,28 @@ $ npm install vue
 
 ## CLI (أدوات سطر الأوامر)
 
-Vue provides an [official CLI](https://github.com/vuejs/vue-cli) for quickly scaffolding ambitious Single Page Applications. It provides batteries-included build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds. See [the Vue CLI docs](https://cli.vuejs.org) for more details.
+Vue توفر [أدوات سطر الأوامر الرسمية](https://github.com/vuejs/vue-cli) لمساعدتك على إنشاء تطبيقات الصفحة الواحدة بشكل سريع. سوف تستهلك فقط بضع دقائق للبدء ببناء تطبيقات جاهز للنشر. أنظر [توثيق أدوات سطر الأوامر لـVue](https://cli.vuejs.org) لمزيد من المعلومات.
 
-<p class="tip">The CLI assumes prior knowledge of Node.js and the associated build tools. If you are new to Vue or front-end build tools, we strongly suggest going through <a href="./">the guide</a> without any build tools before using the CLI.</p>
+<p class="tip">إستخدام أدوات سطر الأوامر يتطلب أن يكون لديك معرفة بـNode.js وأدوات البناء المرتبطة بها. إذا كنت جديد على Vue أو أدوات بناء الواجهات الأمامية، فنحن نقترح بشدة أن تقوم بإتباع <a href="./">الدليل</a> بدون إستخدام أي أدوات بناء قبل بدءك بإستخدام أدوات سطر الأوامر.</p>
 
-<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/real-world-vue-js/vue-cli" target="_blank" rel="noopener" title="Vue CLI">Watch a video explanation on Vue Mastery</a></div>
+<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/real-world-vue-js/vue-cli" target="_blank" rel="noopener" title="Vue CLI">قم بمشاهدة فيديو توضيحي على Vue Mastery</a></div>
 
-## Explanation of Different Builds
+## توضيح الإصدارات المختلفة
 
-In the [`dist/` directory of the NPM package](https://cdn.jsdelivr.net/npm/vue/dist/) you will find many different builds of Vue.js. Here's an overview of the difference between them:
+في [مجلد `dist/` الخاص بحزمة NPM](https://cdn.jsdelivr.net/npm/vue/dist/) سوف تجد العديد من الإصدارات الخاصة بـVue.js. إليك نبذة عن الفرق بينهم:
 
 | | UMD | CommonJS | ES Module (for bundlers) | ES Module (for browsers) |
 | --- | --- | --- | --- | --- |
-| **Full** | vue.js | vue.common.js | vue.esm.js | vue.esm.browser.js |
-| **Runtime-only** | vue.runtime.js | vue.runtime.common.js | vue.runtime.esm.js | - |
-| **Full (production)** | vue.min.js | - | - | vue.esm.browser.min.js |
-| **Runtime-only (production)** | vue.runtime.min.js | - | - | - |
+| **الإصدار الكامل** | vue.js | vue.common.js | vue.esm.js | vue.esm.browser.js |
+| **إصدار بيئة التشغيل فقط** | vue.runtime.js | vue.runtime.common.js | vue.runtime.esm.js | - |
+| **الإصدار الكامل (الإنتاج)** | vue.min.js | - | - | vue.esm.browser.min.js |
+| **إصدار بيئة التشغيل (الإنتاج)** | vue.runtime.min.js | - | - | - |
 
-### Terms
+### مصطلحات
 
-- **Full**: builds that contain both the compiler and the runtime.
+- **الكامل**: الإصدارات التي تحتوي على كلِ من المترجم وبيئة العمل.
 
-- **Compiler**: code that is responsible for compiling template strings into JavaScript render functions.
+- **المترجم**: الكود المسئول عن ترجمة قوالب الكلمات لدوال Javascript الخاصة الخاصة بالتصدير.
 
 - **Runtime**: code that is responsible for creating Vue instances, rendering and patching virtual DOM, etc. Basically everything minus the compiler.
 

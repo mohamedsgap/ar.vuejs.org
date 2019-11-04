@@ -40,7 +40,7 @@ gz_size: "30.90"
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 ```
-للإنتاج، ننصح بالربط مع إصدار مخصص لتفادي الكسر غير المتوقع من الإصدارات الأحدث:
+للإنتاج، ننصح بالربط مع إصدار مخصص حتى لا يحدث تعارض مع الإصدارات الأحدث:
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>

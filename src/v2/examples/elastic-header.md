@@ -1,5 +1,5 @@
 ---
-title: التروس المرن
+title: الترويس المرن
 type: examples
 order: 7
 ---

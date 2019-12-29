@@ -1,5 +1,5 @@
 ---
-title: Firebase + المصداقية
+title: Firebase + المصادقة
 type: examples
 order: 10
 ---

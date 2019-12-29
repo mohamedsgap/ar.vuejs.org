@@ -1,10 +1,10 @@
 ---
-title: HackerNews Clone
+title: استنساخ HackerNews
 type: examples
 order: 12
 ---
 
-> This is a HackerNews clone built upon HN's official Firebase API, Vue 2.0 + Vue Router + Vuex, with server-side rendering.
+> هذا هو HackerNews استنساخ مبنية على HackerNews الرسمية Firebase API، Vue 2.0 + Vue Router + Vuex، مع تصيير جهة الخلفية.
 
 {% raw %}
 <div style="max-width: 600px;">
@@ -14,22 +14,22 @@ order: 12
 </div>
 {% endraw %}
 
-> [Live Demo](https://vue-hn.herokuapp.com/)
-> Note: the demo may need some spin up time if nobody has accessed it for a certain period.
+> [عرض توضيحي حي](https://vue-hn.herokuapp.com/)
+> ملاحظة: قد يحتاج العرض التوضيحي لبعض الوقت في الدوران إذا لم يصل إليه أحد لفترة معينة.
 >
-> [[Source](https://github.com/vuejs/vue-hackernews-2.0)]
+> [[المصدر](https://github.com/vuejs/vue-hackernews-2.0)]
 
-## Features
+## ميزات
 
-- Server Side Rendering
-  - Vue + Vue Router + Vuex working together
-  - Server-side data pre-fetching
-  - Client-side state & DOM hydration
-- Single-file Vue Components
-  - Hot-reload in development
-  - CSS extraction for production
-- Real-time List Updates with FLIP Animation
+- تصيير جهة المستخدم
+  - Vue + Vue Router + Vuex للعمل معا
+  - بيانات جهة المستخدم قبل جلبها
+  - حالة جهة المستخدم & إماهة DOM
+- مكون Vue للملف الوحيد
+  - Hot-reload قيد التطوير
+  - إستخلاص CSS للإنتاح
+- الوقت الحقيقي لتحديث قائمة مع تأثير القلب
 
-## Architecture Overview
+## نظرة عامة عن هندسة
 
 <img width="973" alt="Hackernew clone architecture overview" src="../../images/hn-architecture.png">

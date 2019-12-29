@@ -1,10 +1,10 @@
 ---
-title: استنساخ HackerNews
+title: نسخة من HackerNews
 type: examples
 order: 12
 ---
 
-> هذا هو HackerNews استنساخ مبنية على HackerNews الرسمية Firebase API، Vue 2.0 + Vue Router + Vuex، مع تصيير جهة الخلفية.
+> هذا مثال على نسخة من HackerNews مبني على API الرسمي الخاص بـHackerNews مع Vue 2.0،  Vue Router + Vuex، مع تصيير من جهة الخادم.
 
 {% raw %}
 <div style="max-width: 600px;">
@@ -21,9 +21,9 @@ order: 12
 
 ## ميزات
 
-- تصيير جهة المستخدم
+- تصيير من جهة الخادم
   - Vue + Vue Router + Vuex للعمل معا
-  - بيانات جهة المستخدم قبل جلبها
+  - بيانات جهة الخادم قبل جلبها
   - حالة جهة المستخدم & إماهة DOM
 - مكون Vue للملف الوحيد
   - Hot-reload قيد التطوير

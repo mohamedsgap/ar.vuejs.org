@@ -1,5 +1,5 @@
 ---
-title: الوقت الحقيقي مع deepstreamHub
+title: الوقت الحقيقي  بواسطة deepstreamHub
 type: examples
 order: 9
 ---

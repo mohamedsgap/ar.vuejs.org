@@ -1,10 +1,10 @@
 ---
-title: Themes
+title: مظاهر
 type: examples
 is_new: true
 order: 13
 ---
-> With the examples below built by our partners from [Creative Tim](https://creative-tim.com?affiliate_id=116187) you can see how a real world application is built, the technology stack behind it and how most of the concepts you've learned so far apply in a real world application. 
+> من خلال الأمثلة التالية التي صممها شركاؤنا من [Creative Tim](https://creative-tim.com?affiliate_id=116187) يمكنك أن ترى كيف تم بناء تطبيق العالم الحقيقي، ومجموعة التكنولوجيا وراء ذلك وكيف أن معظم المفاهيم التي تعلمتها تنطبق حتى الآن في تطبيق العالم الحقيقي.
 
 {% raw %}
 <div id="themes-example" class="themes-grid">
@@ -20,7 +20,7 @@ order: 13
    <div class="see-more-container">
     <a :href="`https://www.creative-tim.com/bootstrap-themes/vuejs-themes?affiliate_id=${affiliateId}`"
        class="button white see-more-link">
-       See More Themes
+       رؤية المزيد من المظاهر
     </a>
    </div>
 </div>

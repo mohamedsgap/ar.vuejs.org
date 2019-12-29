@@ -1,5 +1,5 @@
 ---
-title: الرسم البياني بإستخدام SVG
+title: الرسم البياني باستخدام SVG
 type: examples
 order: 5
 ---

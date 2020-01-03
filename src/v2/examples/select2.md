@@ -1,9 +1,9 @@
 ---
-title: Wrapper Component
+title: المكون المغلف
 type: examples
 order: 8
 ---
 
-> In this example we are integrating a 3rd party jQuery plugin (select2) by wrapping it inside a custom component.
+> في هذا المثال سندرج إضافة خارجية jQuery (select2) عن طريق تغليفها داخل مكون مخصص.
 
 <iframe width="100%" height="500" src="https://jsfiddle.net/chrisvfritz/d131Lebj/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

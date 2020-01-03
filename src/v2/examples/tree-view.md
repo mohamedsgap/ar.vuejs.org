@@ -1,9 +1,9 @@
 ---
-title: Tree View
+title: شجرة الإظهار
 type: examples
 order: 4
 ---
 
-> Example of a simple tree view implementation showcasing recursive usage of components.
+> مثال على طريقة عرض الشجرة البسيطة التي تعرض الاستخدام التراجعي للمكونات.
 
 <iframe width="100%" height="500" src="https://jsfiddle.net/chrisvfritz/pnqzspoe/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

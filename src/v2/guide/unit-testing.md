@@ -111,7 +111,7 @@ describe('MyComponent', () => {
 
 ## تأكيد التحديثات غير المتزامنة
 
-نظرًا لأن Vue [تنفذ تحديثات DOM بشكل غير متزامن](reactivity.html # Async-Update-Queue)، فيجب إجراء التأكيدات على تحديثات DOM الناتجة عن تغيير الحالة في رد اتصال `Vue.nextTick`:
+نظرًا لأن Vue [تنفذ تحديثات DOM بشكل غير متزامن](reactivity.html#Async-Update-Queue)، فيجب إجراء التأكيدات على تحديثات DOM الناتجة عن تغيير الحالة في رد اتصال `Vue.nextTick`:
 
 ``` js
 // Inspect the generated HTML after a state update

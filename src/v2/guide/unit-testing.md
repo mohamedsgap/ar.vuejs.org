@@ -4,11 +4,11 @@ type: guide
 order: 402
 ---
 
-> [Vue CLI](https://cli.vuejs.org/) has built-in options for unit testing with [Jest](https://github.com/facebook/jest) or [Mocha](https://mochajs.org/) that works out of the box. We also have the official [Vue Test Utils](https://vue-test-utils.vuejs.org/) which provides more detailed guidance for custom setups.
+> يحتوي [Vue CLI](https://cli.vuejs.org) على خيارات مدمجة لاختبار الوحدة باستخدام [Jest](https://github.com/facebook/jest) أو [Mocha](https: // mochajs.org/) الذي يعمل من خارج منطقة الجزاء. لدينا أيضًا [استخدام اختبار Vue](https://vue-test-utils.vuejs.org/) الرسمي الذي يوفر إرشادات أكثر تفصيلًا عن الإعدادات المخصصة.
 
-## Simple Assertions
+## تأكيدات بسيطة
 
-You don't have to do anything special in your components to make them testable. Export the raw options:
+ليس عليك القيام بأي شيء خاص في مكوناتك لجعلها قابلة للاختبار. تصدير الخيارات الأولية:
 
 ``` html
 <template>
@@ -29,7 +29,7 @@ You don't have to do anything special in your components to make them testable. 
 </script>
 ```
 
-Then import the component options along with Vue, and you can make many common assertions (here we are using Jasmine/Jest style `expect` assertions just as an example):
+بعد ذلك ، قم باستيراد خيارات المكونات إلى جانب Vue ، ويمكنك تقديم العديد من التأكيدات الشائعة (هنا نستخدم تأكيدات Jasmine/Jest style "تتوقع" فقط كمثال):
 
 ``` js
 // Import Vue and the component being tested

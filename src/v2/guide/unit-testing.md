@@ -109,9 +109,9 @@ describe('MyComponent', () => {
 })
 ```
 
-## Asserting Asynchronous Updates
+## تأكيد التحديثات غير المتزامنة
 
-Since Vue [performs DOM updates asynchronously](reactivity.html#Async-Update-Queue), assertions on DOM updates resulting from state change will have to be made in a `Vue.nextTick` callback:
+نظرًا لأن Vue [تنفذ تحديثات DOM بشكل غير متزامن](reactivity.html # Async-Update-Queue)، فيجب إجراء التأكيدات على تحديثات DOM الناتجة عن تغيير الحالة في رد اتصال `Vue.nextTick`:
 
 ``` js
 // Inspect the generated HTML after a state update
@@ -127,4 +127,4 @@ it('updates the rendered message when vm.message updates', done => {
 })
 ```
 
-For more in-depth information on unit testing in Vue, check out [Vue Test Utils](https://vue-test-utils.vuejs.org/) and our cookbook entry about [unit testing vue components](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html).
+لمزيد من المعلومات المتعمقة حول اختبار الوحدة في Vue، تحقق من [Vue Test Utils](https://vue-test-utils.vuejs.org/), وإدخال كتاب الطبخ الخاص بنا حول [مكونات اختبار وحدة الاختبار](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html).

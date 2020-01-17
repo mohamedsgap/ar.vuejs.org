@@ -67,9 +67,9 @@ describe('MyComponent', () => {
 })
 ```
 
-## Writing Testable Components
+## كتابة مكونات قابلة للاختبار
 
-A component's render output is primarily determined by the props it receives. If a component's render output solely depends on its props it becomes straightforward to test, similar to asserting the return value of a pure function with different arguments. Take a simplified example:
+يتم تحديد ناتج تصيير المكون في المقام الأول عن طريق الدعائم التي يتلقاها. إذا كان إخراج التجسيد الخاص بالمكون يعتمد فقط على الدعائم الخاصة به، فسيصبح من السهل اختباره، على غرار تأكيد قيمة الإرجاع للدالة الخالصة ذات الوسائط المختلفة. خذ مثالا مبسطا:
 
 ``` html
 <template>
@@ -83,7 +83,7 @@ A component's render output is primarily determined by the props it receives. If
 </script>
 ```
 
-You can assert its render output with different props using the `propsData` option:
+يمكنك تأكيد ناتج التجسيد باستخدام الدعائم المختلفة باستخدام خيار `propsData`:
 
 ``` js
 import Vue from 'vue'

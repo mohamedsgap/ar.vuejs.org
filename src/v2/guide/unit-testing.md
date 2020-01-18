@@ -127,4 +127,4 @@ it('updates the rendered message when vm.message updates', done => {
 })
 ```
 
-لمزيد من المعلومات المتعمقة حول اختبار الوحدة في Vue، تحقق من [Vue Test Utils](https://vue-test-utils.vuejs.org/), وإدخال كتاب الطبخ الخاص بنا حول [مكونات اختبار وحدة الاختبار](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html).
+لمزيد من المعلومات المتعمقة حول اختبار الوحدة في Vue، تحقق من [Vue Test Utils](https://vue-test-utils.vuejs.org/)، ومدخل (مقدمة) كتاب الطبخ الخاص بنا حول [اختبار الوحدة لمكونات Vue](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html).

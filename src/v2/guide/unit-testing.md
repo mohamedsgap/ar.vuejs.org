@@ -4,7 +4,7 @@ type: guide
 order: 402
 ---
 
-> يحتوي [Vue CLI](https://cli.vuejs.org) على خيارات مدمجة لاختبار الوحدة باستخدام [Jest](https://github.com/facebook/jest) أو [Mocha](https://mochajs.org/) . لدينا أيضًا [استخدام اختبار Vue](https://vue-test-utils.vuejs.org/) الرسمي الذي يوفر إرشادات أكثر تفصيلًا عن الإعدادات المخصصة.
+> يحتوي [Vue CLI](https://cli.vuejs.org) على خيارات مدمجة لاختبار الوحدة بـ[Jest](https://github.com/facebook/jest) أو [Mocha](https://mochajs.org/) التي تعمل من خارج المنطقة. لدينا أيضًا [أداة الاختبار Vue](https://vue-test-utils.vuejs.org/) الرسمية الذي يوفر إرشادات أكثر تفصيلًا عن الإعدادات المخصصة.
 
 ## تأكيدات بسيطة
 

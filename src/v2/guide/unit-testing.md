@@ -1,14 +1,14 @@
 ---
-title: Unit Testing
+title: اختبار الوحدة
 type: guide
 order: 402
 ---
 
-> [Vue CLI](https://cli.vuejs.org/) has built-in options for unit testing with [Jest](https://github.com/facebook/jest) or [Mocha](https://mochajs.org/) that works out of the box. We also have the official [Vue Test Utils](https://vue-test-utils.vuejs.org/) which provides more detailed guidance for custom setups.
+> يحتوي [Vue CLI](https://cli.vuejs.org) على خيارات مدمجة لاختبار الوحدة بـ[Jest](https://github.com/facebook/jest) أو [Mocha](https://mochajs.org/) التي تعمل من خارج المنطقة. لدينا أيضًا [أداة الاختبار Vue](https://vue-test-utils.vuejs.org/) الرسمية الذي يوفر إرشادات أكثر تفصيلًا عن الإعدادات المخصصة.
 
-## Simple Assertions
+## تحققات بسيطة
 
-You don't have to do anything special in your components to make them testable. Export the raw options:
+ليس عليك القيام بأي شيء خاص في مكوناتك لجعلها قابلة للاختبار. تصدير اسطر الخيارات :
 
 ``` html
 <template>
@@ -29,7 +29,7 @@ You don't have to do anything special in your components to make them testable. 
 </script>
 ```
 
-Then import the component options along with Vue, and you can make many common assertions (here we are using Jasmine/Jest style `expect` assertions just as an example):
+بعد ذلك قم باستيراد خيارات المكونات مع Vue،ويمكنك تقديم العديد من التحققات الشائعة (هنا نستخدم لتحقق Jasmine/Jest style `expect` فقط كمثال):
 
 ``` js
 // Import Vue and the component being tested
@@ -67,9 +67,9 @@ describe('MyComponent', () => {
 })
 ```
 
-## Writing Testable Components
+## كتابة مكونات قابلة للاختبار
 
-A component's render output is primarily determined by the props it receives. If a component's render output solely depends on its props it becomes straightforward to test, similar to asserting the return value of a pure function with different arguments. Take a simplified example:
+يتم تحديد ناتج تصيير المكون في المقام الأول عن طريق "props" او الخصائص التي يتلقاها. إذا كان إخراج التجسيد الخاص بالمكون يعتمد فقط على الخصائص الخاصة به، فسيصبح من السهل اختباره، على غرار تأكيد قيمة الإرجاع للدالة العادية ذات الوسائط المختلفة. خذ مثالا مبسطا:
 
 ``` html
 <template>
@@ -83,7 +83,7 @@ A component's render output is primarily determined by the props it receives. If
 </script>
 ```
 
-You can assert its render output with different props using the `propsData` option:
+يمكنك تأكيد ناتج التصيير باستخدام الخصائص المختلفة باستخدام خيار `propsData`:
 
 ``` js
 import Vue from 'vue'
@@ -109,9 +109,9 @@ describe('MyComponent', () => {
 })
 ```
 
-## Asserting Asynchronous Updates
+## تأكيد التحديثات غير المتزامنة
 
-Since Vue [performs DOM updates asynchronously](reactivity.html#Async-Update-Queue), assertions on DOM updates resulting from state change will have to be made in a `Vue.nextTick` callback:
+نظرًا لأن Vue [تنفذ تحديثات DOM بشكل غير متزامن](reactivity.html#Async-Update-Queue)، فيجب إجراء التأكيدات على التحديثات DOM الناتجة عن تغيير الحالة في رد اتصال `Vue.nextTick`:
 
 ``` js
 // Inspect the generated HTML after a state update
@@ -127,4 +127,4 @@ it('updates the rendered message when vm.message updates', done => {
 })
 ```
 
-For more in-depth information on unit testing in Vue, check out [Vue Test Utils](https://vue-test-utils.vuejs.org/) and our cookbook entry about [unit testing vue components](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html).
+لمزيد من المعلومات المتعمقة حول اختبار الوحدة في Vue، تحقق من [Vue Test Utils](https://vue-test-utils.vuejs.org/)، ومدخل (مقدمة) كتاب الطبخ الخاص بنا حول [اختبار الوحدة لمكونات Vue](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html).

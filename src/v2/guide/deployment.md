@@ -118,11 +118,11 @@ rollup({
 
 إذا كنت تستخدم Webpack، وتفضل فصل ملفات JavaScript والقالب، فيمكنك استخدام [vue-template-loader](https://github.com/ktsn/vue-template-loader)، والذي يحول أيضًا ملفات القوالب إلى JavaScript تقديم وظائف خلال خطوة البناء.
 
-## Extracting Component CSS
+## استخراج مكون CSS
 
-When using Single-File Components, the CSS inside components are injected dynamically as `<style>` tags via JavaScript. This has a small runtime cost, and if you are using server-side rendering it will cause a "flash of unstyled content". Extracting the CSS across all components into the same file will avoid these issues, and also result in better CSS minification and caching.
+عند استخدام مكونات أحادية الملف، يتم حقن المكونات الداخلية لـ CSS ديناميكيًا كعلامات `<style>` عبر JavaScript. هذا له تكلفة تشغيل صغيرة، وإذا كنت تستخدم التجسيد من جانب الخادم، فسيؤدي ذلك إلى "flash لمحتوى غير منسق". سيتسبب استخراج CSS عبر جميع المكونات في نفس الملف في تجنب هذه المشكلات، كما يؤدي إلى تحسين CSS وتخزينها مؤقتًا.
 
-Refer to the respective build tool documentations to see how it's done:
+ارجع إلى وثائق أداة الإنشاء المعنية لترى كيف يتم ذلك:
 
 - [Webpack + vue-loader](https://vue-loader.vuejs.org/en/configurations/extract-css.html) (the `vue-cli` webpack template has this pre-configured)
 - [Browserify + vueify](https://github.com/vuejs/vueify#css-extraction)

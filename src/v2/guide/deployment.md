@@ -128,6 +128,6 @@ rollup({
 - [Browserify + vueify](https://github.com/vuejs/vueify#css-extraction)
 - [Rollup + rollup-plugin-vue](https://vuejs.github.io/rollup-plugin-vue/#/en/2.3/?id=custom-handler)
 
-## Tracking Runtime Errors
+## تتبع أخطاء وقت التشغيل
 
-If a runtime error occurs during a component's render, it will be passed to the global `Vue.config.errorHandler` config function if it has been set. It might be a good idea to leverage this hook together with an error-tracking service like [Sentry](https://sentry.io), which provides [an official integration](https://sentry.io/for/vue/) for Vue.
+إذا حدث خطأ في وقت التشغيل أثناء تصيير أحد المكونات، فسيتم تمريره إلى وظيفة التكوين `Vue.config.errorHandler` العالمية إذا تم تعيينها. قد تكون فكرة جيدة الاستفادة من هذا الخطاف مع خدمة تتبع الأخطاء مثل [Sentry](https://sentry.io) ، والتي توفر [تكاملًا رسميًا](https://sentry.io/for/vue/) ل Vue.

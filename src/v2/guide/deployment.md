@@ -46,15 +46,15 @@ module.exports = {
 
 #### Browserify
 
-- Run your bundling command with the actual `NODE_ENV` environment variable set to `"production"`. This tells `vueify` to avoid including hot-reload and development related code.
+- قم بتشغيل أمر التجميع باستخدام متغير البيئة `NODE_ENV` الفعلي الذي تم تعيينه على"الإنتاج". هذا يخبر `vueify` لتجنب بما في ذلك إعادة تحميل الساخنة ورمز التطوير ذات الصلة.
 
-- Apply a global [envify](https://github.com/hughsk/envify) transform to your bundle. This allows the minifier to strip out all the warnings in Vue's source code wrapped in env variable conditional blocks. For example:
+- قم بتطبيق تحويل [envify](https://github.com/hughsk/envify) إلى الحزمة الخاصة بك. يسمح هذا لجهاز المصغر بتجميع كافة التحذيرات في شفرة مصدر Vue ملفوفة في كتل شرطية متغير env. فمثلا:
 
   ``` bash
   NODE_ENV=production browserify -g envify -e main.js | uglifyjs -c -m > build.js
   ```
 
-- Or, using [envify](https://github.com/hughsk/envify) with Gulp:
+- أو ، باستخدام [envify](https://github.com/hughsk/envify) مع Gulp:
 
   ``` js
   // Use the envify custom module to specify environment variables
@@ -70,7 +70,7 @@ module.exports = {
     .bundle()
   ```
 
-- Or, using [envify](https://github.com/hughsk/envify) with Grunt and [grunt-browserify](https://github.com/jmreidy/grunt-browserify):
+- أو باستخدام [envify](https://github.com/hughsk/envify) مع Grunt و [grunt-browserify](https://github.com/jmreidy/grunt-browserify):
 
   ``` js
   // Use the envify custom module to specify environment variables
@@ -95,7 +95,7 @@ module.exports = {
 
 #### Rollup
 
-Use [rollup-plugin-replace](https://github.com/rollup/rollup-plugin-replace):
+استخدم [rollup-plugin-replace](https://github.com/rollup/rollup-plugin-replace):
 
 ``` js
 const replace = require('rollup-plugin-replace')

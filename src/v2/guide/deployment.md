@@ -14,9 +14,9 @@ order: 404
 
 إذا كنت تستخدم البنية الكاملة، أي تضمين Vue مباشرة عبر علامة البرنامج النصي بدون أداة إنشاء، تأكد من استخدام الإصدار المصغر (`vue.min.js`) للإنتاج. يمكن العثور على كلا الإصدارين في [دليل التثبيت](installation.html#Direct-lt-script-gt-Include).
 
-### With Build Tools
+### مع أدوات البناء
 
-When using a build tool like Webpack or Browserify, the production mode will be determined by `process.env.NODE_ENV` inside Vue's source code, and it will be in development mode by default. Both build tools provide ways to overwrite this variable to enable Vue's production mode, and warnings will be stripped by minifiers during the build. All `vue-cli` templates have these pre-configured for you, but it would be beneficial to know how it is done:
+عند استخدام أداة إنشاء مثل Webpack أو Browserify، سيتم تحديد وضع الإنتاج بواسطة `process.env.NODE_ENV` داخل شفرة مصدر Vue، وسيكون في وضع التطوير افتراضيًا. توفر كلتا أدوات التصميم طرقًا للكتابة فوق هذا المتغير لتمكين وضع الإنتاج الخاص بـ Vue، وسيتم تجريد التحذيرات بواسطة المصغرات أثناء الإنشاء. تحتوي جميع قوالب vue-cli على هذه التكوينات المسبقة لك، لكن سيكون من المفيد معرفة كيفية القيام بذلك:
 
 #### Webpack
 

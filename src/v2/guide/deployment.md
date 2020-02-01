@@ -20,7 +20,7 @@ order: 404
 
 #### Webpack
 
-In Webpack 4+, you can use the `mode` option:
+في Webpack 4+ ، يمكنك استخدام خيار `mode`:
 
 ``` js
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
 }
 ```
 
-But in Webpack 3 and earlier, you'll need to use [DefinePlugin](https://webpack.js.org/plugins/define-plugin/):
+ولكن في Webpack 3 والإصدارات السابقة، ستحتاج إلى استخدام [DefinePlugin](https://webpack.js.org/plugins/define-plugin/):
 
 ``` js
 var webpack = require('webpack')

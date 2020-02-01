@@ -4,11 +4,11 @@ type: guide
 order: 404
 ---
 
-> Most of the tips below are enabled by default if you are using [Vue CLI](https://cli.vuejs.org). This section is only relevant if you are using a custom build setup.
+> يتم تمكين معظم النصائح أدناه افتراضيًا إذا كنت تستخدم [Vue CLI](https://cli.vuejs.org). هذا القسم مناسب فقط إذا كنت تستخدم إعداد بناء مخصص.
 
-## Turn on Production Mode
+## تشغيل وضع الإنتاج
 
-During development, Vue provides a lot of warnings to help you with common errors and pitfalls. However, these warning strings become useless in production and bloat your app's payload size. In addition, some of these warning checks have small runtime costs that can be avoided in production mode.
+أثناء التطوير، تقدم Vue الكثير من التحذيرات لمساعدتك في الأخطاء والمخاطر الشائعة. ومع ذلك، فإن سلاسل التحذير هذه تصبح غير مجدية في الإنتاج وتضخيم حجم حمولة التطبيق. بالإضافة إلى ذلك، تحتوي بعض عمليات التحقق من التحذير هذه على تكاليف وقت تشغيل صغيرة يمكن تجنبها في وضع الإنتاج.
 
 ### Without Build Tools
 

@@ -110,13 +110,13 @@ rollup({
 }).then(...)
 ```
 
-## Pre-Compiling Templates
+## Pre-Compiling قوالب
 
-When using in-DOM templates or in-JavaScript template strings, the template-to-render-function compilation is performed on the fly. This is usually fast enough in most cases, but is best avoided if your application is performance-sensitive.
+عند استخدام القوالب داخل DOM أو سلاسل قوالب JavaScript، يتم تنفيذ التصيير من القالب إلى function أثناء التنقل. عادة ما يكون هذا سريعًا في معظم الحالات، ولكن من الأفضل تجنبه إذا كان التطبيق الخاص بك حساسًا للأداء.
 
-The easiest way to pre-compile templates is using [Single-File Components](single-file-components.html) - the associated build setups automatically performs pre-compilation for you, so the built code contains the already compiled render functions instead of raw template strings.
+إن أسهل طريقة لإعداد القوالب المسبقة هي استخدام [Single-File Components](single-file-components.html) - تقوم إعدادات الإنشاء المرتبطة تلقائيًا بإجراء التحويل المسبق نيابة عنك ، وبالتالي فإن الشفرة المدمجة تحتوي على وظائف التصيير المترجمة بالفعل بدلاً من سلاسل قالب الخام.
 
-If you are using Webpack, and prefer separating JavaScript and template files, you can use [vue-template-loader](https://github.com/ktsn/vue-template-loader), which also transforms the template files into JavaScript render functions during the build step.
+إذا كنت تستخدم Webpack، وتفضل فصل ملفات JavaScript والقالب، فيمكنك استخدام [vue-template-loader](https://github.com/ktsn/vue-template-loader)، والذي يحول أيضًا ملفات القوالب إلى JavaScript تقديم وظائف خلال خطوة البناء.
 
 ## Extracting Component CSS
 

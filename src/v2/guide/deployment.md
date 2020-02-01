@@ -10,9 +10,9 @@ order: 404
 
 أثناء التطوير، تقدم Vue الكثير من التحذيرات لمساعدتك في الأخطاء والمخاطر الشائعة. ومع ذلك، فإن سلاسل التحذير هذه تصبح غير مجدية في الإنتاج وتضخيم حجم حمولة التطبيق. بالإضافة إلى ذلك، تحتوي بعض عمليات التحقق من التحذير هذه على تكاليف وقت تشغيل صغيرة يمكن تجنبها في وضع الإنتاج.
 
-### Without Build Tools
+### بدون أدوات البناء
 
-If you are using the full build, i.e. directly including Vue via a script tag without a build tool, make sure to use the minified version (`vue.min.js`) for production. Both versions can be found in the [Installation guide](installation.html#Direct-lt-script-gt-Include).
+إذا كنت تستخدم البنية الكاملة، أي تضمين Vue مباشرة عبر علامة البرنامج النصي بدون أداة إنشاء، تأكد من استخدام الإصدار المصغر (`vue.min.js`) للإنتاج. يمكن العثور على كلا الإصدارين في [دليل التثبيت](installation.html#Direct-lt-script-gt-Include).
 
 ### With Build Tools
 

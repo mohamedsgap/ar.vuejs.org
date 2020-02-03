@@ -54,7 +54,7 @@ module.exports = {
   NODE_ENV=production browserify -g envify -e main.js | uglifyjs -c -m > build.js
   ```
 
-- أو ، باستخدام [envify](https://github.com/hughsk/envify) مع Gulp:
+- أو باستخدام [envify](https://github.com/hughsk/envify) مع Gulp:
 
   ``` js
   // Use the envify custom module to specify environment variables

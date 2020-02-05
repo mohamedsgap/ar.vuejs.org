@@ -20,7 +20,7 @@ order: 404
 
 #### Webpack
 
-في Webpack 4+ ، يمكنك استخدام خيار `mode`:
+في Webpack 4+ ،يمكنك استخدام خيار `mode`:
 
 ``` js
 module.exports = {
